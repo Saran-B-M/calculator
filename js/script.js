@@ -50,11 +50,14 @@ buttons.forEach(button=>
             infixToPostfix(display.textContent);
             return
         }
+        else if(data == "backspace"){
+            display.textContent = display.textContent.slice(0, -1);
+        }
         else if(data === "clear") {
             display.textContent = "";
             return
         }
-        display.textContent += data;
+        else display.textContent += data;
         })
         
 )

@@ -9,16 +9,13 @@ body{
     padding: 5rem
 }
 
-p {
-    
-}
 
 /**********************************class***************************************/
 .calculator {
     margin-top: 6rem;
     width: 32rem;
     height: auto;
-    background-color: rgb(206, 206, 206);
+    background-color: rgb(59, 59, 59);
     border-radius: 0.5rem;
     padding: 1rem 0;
 
@@ -33,7 +30,7 @@ p {
 .display {
     width: 25rem;
     height: 5rem;
-    background-color: white;
+    background-color: rgb(223, 222, 222);
     border-radius: 0.5rem;
     margin-top: 1rem;
     font-size: 2rem;
@@ -52,6 +49,18 @@ p {
     gap: 0.5rem;
     padding: 0.5rem;
 
+}
+
+button[data-number="clear"]{
+    background-color: rgb(173, 49, 49);
+}
+
+button[data-number="backspace"]{
+    background-color: rgb(197, 159, 88);
+}
+
+.operation {
+    background-color: rgb(155, 154, 154);
 }
 
 .numpad-row {
