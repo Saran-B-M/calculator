@@ -10,7 +10,7 @@ body{
 }
 
 p {
-    font-size: 1.5rem;
+    
 }
 
 /**********************************class***************************************/
@@ -36,6 +36,7 @@ p {
     background-color: white;
     border-radius: 0.5rem;
     margin-top: 1rem;
+    font-size: 2rem;
 
     display: flex;
     align-items: center;
@@ -45,10 +46,12 @@ p {
 .numpad {
     width: 25rem;
     height: 25rem;
+    
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     padding: 0.5rem;
+
 }
 
 .numpad-row {
@@ -60,5 +63,6 @@ p {
 .numpad button {
     flex: 1;
     border-radius: 0.5rem;
+    font-size: 1.5rem;
 }
 /***********************************id*****************************************/
