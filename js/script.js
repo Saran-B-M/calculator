@@ -44,8 +44,25 @@ const buttons = document.querySelectorAll("button");
 const display = document.querySelector(".display");
 
 buttons.forEach(button=> 
-    button.addEventListener("click", e => {
-        let data = e.target.dataset.number;
+    button.addEventListener("click", e => displayInput(e.target.dataset.number)))
+
+window.addEventListener("keydown", e=> {
+    if(e.key ==="Enter"){
+        infixToPostfix(display.textContent);
+        return
+    }
+    else if(e.key ==="Backspace") {
+        display.textContent = display.textContent.slice(0, -1);
+    }
+    else if(e.key ==="Escape"){
+        display.textContent = "";
+    }
+    else if(e.shiftKey && e.key!="Shift") displayInput(e.key);
+    else if(!e.shiftKey) displayInput(e.key);
+} );
+
+function displayInput(value){
+    let data = value;
         if(data==="="){
             infixToPostfix(display.textContent);
             return
@@ -58,9 +75,7 @@ buttons.forEach(button=>
             return
         }
         else display.textContent += data;
-        })
-        
-)
+}
 
 //After equal to button is pressed convert the infix expression into postfix 
 //expression and evaluate it
